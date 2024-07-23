@@ -7,11 +7,8 @@ def encode(password):
 
 
 def decode(password):
-    num_list = [int(char) for char in password]
-    for i in range(len(num_list)):
-        num_list[i] -= 3
-    password_encoded = ''.join([str(num) for num in num_list])
-    return password_encoded
+    decoded = ''.join(str(int(char) - 3) for char in password)
+    return decoded
 
 
 def menu():
